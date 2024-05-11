@@ -1,5 +1,5 @@
 /* eslint-disable no-empty-function *//* eslint-disable linebreak-style */
-import RestoDbSources from '../../../public/data/restodb-sources';
+import RestoDbSources from '../../data/restodb-sources';
 import { createHomePageTemplate } from '../templates/template-creator';
 
 const Home = {
@@ -12,7 +12,7 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestoDbSources.homePage();
-    const listRestoContainer = document.querySelector('.list-resto');
+    const listRestoContainer = document.querySelector('#listResto');
     restaurants.forEach((restaurant) => {
       listRestoContainer.innerHTML += createHomePageTemplate(restaurant);
     });

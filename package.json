@@ -30,11 +30,11 @@
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0",
     "workbox-precaching": "^6.5.3",
-    "workbox-webpack-plugin": "^6.5.3"
+    "workbox-webpack-plugin": "^6.6.0"
   },
   "dependencies": {
-    "idb": "^7.0.1",
+    "idb": "^8.0.0",
     "regenerator-runtime": "^0.13.9",
-    "workbox-window": "^6.5.3"
+    "workbox-window": "^6.6.0"
   }
 }

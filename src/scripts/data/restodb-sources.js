@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import API_ENDPOINTS from '../../scripts/globals/api-endpoints';
+import API_ENDPOINTS from '../globals/api-endpoints';
 
 class RestoDbSources {
   static async homePage() {
