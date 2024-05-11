@@ -40,16 +40,14 @@ const createRestoDetailTemplate = (restaurants) => `
 `;
 
 const createHomePageTemplate = (restaurants) => `
-  <div class="resto-item">
-    <div class="resto-item__header">
-      <img class="resto-item__header__poster" alt="${restaurants.name}"
-           src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}">
-      <div class="resto-item__header__rating">
-        <p>⭐️<span class="resto-item__header__rating__score">${restaurants.rating}</span></p>
-      </div>
-    </div>
-    <div class="resto-item__content">
+  <div class="card">
+    <img class="resto-img" alt="${restaurants.name}"
+      src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}">
+    <div class="card-title>
       <h3><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
+      <p>⭐️${restaurants.rating}</p>
+    </div>
+    <div class="card-body">
       <p>${restaurants.description}</p>
     </div>
   </div>

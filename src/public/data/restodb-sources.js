@@ -5,7 +5,7 @@ class RestoDbSources {
   static async homePage() {
     const response = await fetch(API_ENDPOINTS.HOME);
     const responseJson = await response.json();
-    return responseJson.results;
+    return responseJson.restaurants;
   }
 
   static async detailResto(id) {
