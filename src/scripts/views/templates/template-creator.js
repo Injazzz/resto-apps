@@ -15,26 +15,26 @@ const createRestoDetailTemplate = (restaurants) => `
         <p>${restaurants.description}</p>
       <h4>Categories</h4>
         <ul>
-          <li>${restaurants.categories.name}</li>
+          <li>${restaurants.categories}</li>
         </ul>
     </div>
   <div class="resto__menu">
     <h3>Menu</h3>
     <div class="container-menu">
       <div class="card-menu foods">
-        <p>${restaurants.menus.foods.name}</p>
+        <p>${restaurants.menus}</p>
       </div>
       <div class="card-menu drinks">
-        <p>${restaurants.menus.drinks.name}</p>
+        <p>${restaurants.menus}</p>
       </div>
     </div>  
   </div>
   <div class="resto__review">
     <h4>Customer Reviews</h4>
     <div class="card-review">
-      <p>name: ${restaurants.customerReviews.name}</p>
-      <p>review: ${restaurants.customerReviews.review}</p>
-      <p>date: ${restaurants.customerReviews.date}</p>
+      <p>name: ${restaurants.customerReviews}</p>
+      <p>review: ${restaurants.customerReviews}</p>
+      <p>date: ${restaurants.customerReviews}</p>
     </div>
   </div>
 `;
@@ -43,8 +43,10 @@ const createHomePageTemplate = (restaurants) => `
   <div class="card">
     <img class="resto-img" alt="${restaurants.name}"
       src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}">
-    <div class="card-title>
-      <h3><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
+    <div class="card-title">
+      <h3>
+        <a href="/#/detail/${restaurants.id}">${restaurants.name}</a>
+      </h3>
       <p>⭐️${restaurants.rating}</p>
     </div>
     <div class="card-body">
